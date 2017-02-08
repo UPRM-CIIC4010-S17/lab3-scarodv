@@ -6,6 +6,10 @@ public class Lab3Exercises {
 		ricardoReyes.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		ricardoReyes.setLocation(900, 400);
 		ricardoReyes.setSize(200, 200);
+		
+		MyPanelClass myPanel = new MyPanelClass();
+		ricardoReyes.getContentPane().add(myPanel);
+		
 		ricardoReyes.setVisible(true);
 	}
 }
