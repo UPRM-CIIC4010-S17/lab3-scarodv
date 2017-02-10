@@ -29,26 +29,33 @@ public class MyPanelClass extends JPanel{
 		
 		//Paint the background 
 		
-		g.setColor(Color.DARK_GRAY);
+		g.setColor(Color.WHITE);
 		g.fillRect(x1, y1, width + 1, height + 1);
+		
+		// Red Rectangles
+		
+		g.setColor(Color.RED);
+		g.fillRect(x1, y1, width + 1, height/5 + 1);
+		g.fillRect(x1, (height-(height/5 + 1))/2, width + 1, height/5 + 1);
+		g.fillRect(x1, y2-(height/5), width + 1, height/5 + 1);
 		
 		//Draw a border
 		
-		g.setColor(Color.CYAN);
-		g.drawRect(x1, y1, width, height);
-		
-		//Inner border
-		
-		g.setColor(Color.MAGENTA);
-		g.drawRect(x1 + 2, y1 + 2, width -3, height -3);
-		
+//		g.setColor(Color.CYAN);
+//		g.drawRect(x1, y1, width, height);
+//		
+//		//Inner border
+//		
+//		g.setColor(Color.MAGENTA);
+//		g.drawRect(x1 + 2, y1 + 2, width -3, height -3);
+//		
 		//Lines
 		
-		g.setColor(Color.WHITE);
-		g.drawLine(x1, y1, x2, y2);
+		g.setColor(Color.CYAN);
+		g.drawLine(x1, y1, x2/2, y2/2);
 		
-		g.setColor(Color.ORANGE);
-		g.drawLine(x2, y1, x1, y2);
+		g.setColor(Color.CYAN);
+		g.drawLine(x2/2, height/2, x1, y2);
 //		
 //	    g.setColor(Color.LIGHT_GRAY);
 //        g.fillOval((x2-55)/2, (y2-55)/2, 55, 55);	
@@ -68,23 +75,33 @@ public class MyPanelClass extends JPanel{
 //        g.setColor(Color.YELLOW);
 //        g.fillPolygon(p);
         
-        
+		  Polygon p1 = new Polygon();
+	        
+	        p1.addPoint(x1, y1);
+	        p1.addPoint(width/2, height/2);
+	        p1.addPoint(x1, y2);
+	        
+	        g.setColor(Color.CYAN);
+	        g.fillPolygon(p1);
         
         Polygon p2 = new Polygon();
         
-        p2.addPoint(x1 + 25, y1 + 73);
-        p2.addPoint(x1 + 41, y1 + 73);
-        p2.addPoint(x1 + 47, y1 + 58);
-        p2.addPoint(x1 + 53, y1 + 73);
-        p2.addPoint(x1 + 69, y1 + 73);
-        p2.addPoint(x1 + 56, y1 + 83);
-        p2.addPoint(x1 + 61, y1 + 98);
-        p2.addPoint(x1 + 47, y1 + 88);
-        p2.addPoint(x1 + 34, y1 + 98);
-        p2.addPoint(x1 + 38, y1 + 83);
+        p2.addPoint(width/10 + 5, height/2 - 7);
+        p2.addPoint(width/10 + 21, height/2 - 7);
+        p2.addPoint(width/10 + 27, height/2 - 22);
+        p2.addPoint(width/10 + 33, height/2 - 7);
+        p2.addPoint(width/10 + 49, height/2 - 7);
+        p2.addPoint(width/10 + 36, height/2 + 3);
+        p2.addPoint(width/10 + 41, height/2 + 18);
+        p2.addPoint(width/10 + 27, height/2 + 8);
+        p2.addPoint(width/10 + 14, height/2 + 18);
+        p2.addPoint(width/10 + 18, height/2 + 3);
+        
+        g.setColor(Color.BLACK);
+        g.drawPolygon(p2);
         
         g.setColor(Color.WHITE);
-        g.drawPolygon(p2);
+        g.fillPolygon(p2);
       
         
 	}
